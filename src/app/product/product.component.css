@@ -1,0 +1,73 @@
+/* ปรับแต่งขนาดตัวอักษรและสีของ h2 และ h4 */
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #d9534f; /* สีแดงอ่อน */
+    text-align: center;
+}
+
+h4 {
+    font-size: 1.75rem;
+    color: #5a5a5a; /* สีเทา */
+    margin-bottom: 1rem;
+}
+
+/* ปรับแต่งเส้นขีด */
+hr {
+    border-top: 3px solid #d9534f;
+    margin-bottom: 2rem;
+}
+
+/* การจัดการ card */
+.card {
+    border: 1px solid #ccc; /* เส้นขอบสีเทาอ่อน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px); /* ยกการ์ดขึ้นเมื่อเมาส์เลื่อนผ่าน */
+}
+
+/* การจัดวางภาพ */
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+/* การจัดการตัวอักษรภายใน card */
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.card-body {
+    padding: 1rem;
+    text-align: center;
+}
+
+/* จัดการระยะห่างของ row */
+.row {
+    margin-bottom: 3rem;
+}
+
+/* การจัดการ column ให้มีการตอบสนองต่อขนาดหน้าจอ */
+@media (max-width: 768px) {
+    .col-3 {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-3 {
+        width: 24%;
+    }
+}
+

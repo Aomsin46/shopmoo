@@ -1,1 +1,178 @@
-<p>price works!</p>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ตารางสินค้า</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f0f2f5;
+      font-family: Arial, sans-serif;
+    }
+    .container {
+      background-color: #ffffff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #dc3545;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    h4 {
+      color: #343a40;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      border-bottom: 2px solid #dc3545;
+      padding-bottom: 0.5rem;
+    }
+    table {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: center;
+      vertical-align: middle;
+      padding: 15px;
+    }
+    th {
+      background-color: #dc3545;
+      color: #ffffff;
+    }
+    td {
+      background-color: #ffffff;
+      border: 1px solid #dee2e6;
+    }
+    td img {
+      max-width: 100px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    .category-title {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+    .table-bordered {
+      border: 1px solid #dee2e6;
+    }
+    .table-bordered th,
+    .table-bordered td {
+      border: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-4">
+    <h2 class="mt-4">ตารางสินค้า</h2>
+    
+    <!-- เนื้อหมูทั้งหมด/All Pork -->
+    <h4 class="mt-4">เนื้อหมูทั้งหมด / All Pork</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="category-title">
+          <th>ชื่อสินค้า</th>
+          <th>รูปภาพ</th>
+          <th>ราคา</th> <!-- เพิ่มคอลัมนี้ -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>หมูสันใน</td>
+          <td><img src="https://files.oaiusercontent.com/file-pwNxq3ctbbULCj01yHhzCe6M?se=2024-09-10T10%3A41%3A53Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D9c093d02-32f0-4f6e-b2a7-d71e173f7f1c.webp&sig=rZ/60AizhdYLOC1hzfQ9XvJ1qm1pzRmWh9kbosrELvY%3D" alt="หมูสันใน"></td>
+          <td>120 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+        <tr>
+          <td>หมูสันนอก</td>
+          <td><img src="https://files.oaiusercontent.com/file-KGxdMgpJGmEjUu6ncOCAVVkR?se=2024-09-10T10%3A42%3A08Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Deca225ac-5703-46f1-b466-19852a6d4b84.webp&sig=TouNd9aGAtTqftOhoisyY3YLeTTyoRIV0D3gV3KQ9HY%3D" alt="หมูสันนอก"></td>
+          <td>150 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+        <tr>
+          <td>สะโพกหมู</td>
+          <td><img src="https://files.oaiusercontent.com/file-We5KIWvm33jujbfanDn3cUyG?se=2024-09-10T10%3A42%3A30Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D52bd8cc3-0394-49e7-8b0a-3618bc119b20.webp&sig=UQGwuI%2BBkOolav4IqT9Y8xQdiVy%2BPQQNyfRkuhf4uyg%3D" alt="สะโพกหมู"></td>
+          <td>200 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+        <tr>
+          <td>สันคอหมู</td>
+          <td><img src="https://files.oaiusercontent.com/file-koVv1Jt7aoXzcTA7uZKSi8v7?se=2024-09-10T10%3A42%3A47Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Dc00c6f03-a099-4a2c-ada0-8becadea19e9.webp&sig=wscx9tZ1wOvSWpA3zc5vnvb4imeU2NwMVBO6aW5asrQ%3D" alt="สันคอหมู"></td>
+          <td>180 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- เครื่องในหมู / Pork Offal -->
+    <h4 class="mt-4">เครื่องในหมู / Pork Offal</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="category-title">
+          <th>ชื่อสินค้า</th>
+          <th>รูปภาพ</th>
+          <th>ราคา</th> <!-- เพิ่มคอลัมนี้ -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ตับหมู</td>
+          <td><img src="https://files.oaiusercontent.com/file-u54OTTVIwEaqHn3EZp74acQF?se=2024-09-10T10%3A51%3A47Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D31ca37d5-6059-4259-878a-21ae9fe83891.webp&sig=%2BH2Vzd55%2BFmzxefi8BzHspVteEXXaW88z1L3DZ/RWRY%3D" alt="ตับหมู"></td>
+          <td>100 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+        <tr>
+          <td>ไส้อ่อนหมู</td>
+          <td><img src="https://files.oaiusercontent.com/file-Ks5MhHrZVAkgnjWaoaLC7ust?se=2024-09-10T10%3A51%3A45Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df07413b0-a8db-44ad-b107-907b1ba7fecc.webp&sig=2A3bDr73MxA1ed07vRMNNHnW4fGwaVgCxqGS72gs698%3D" alt="ไส้อ่อนหมู"></td>
+          <td>130 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+        <tr>
+          <td>ม้ามหมู</td>
+          <td><img src="https://files.oaiusercontent.com/file-YqTPLKfs76a1AtBiNJjdXNnX?se=2024-09-10T10%3A52%3A48Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3De565d5db-56d1-45d9-95f0-8c77fef86765.webp&sig=ILTtRVPkNuQieQ3YJrgODWehGQTDGlYVMIzWSQJLEYU%3D" alt="ม้ามหมู"></td>
+          <td>150 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+        <tr>
+          <td>หัวใจหมู</td>
+          <td><img src="https://files.oaiusercontent.com/file-SOprn2xVTGO8Ck3QLcZ4d8qr?se=2024-09-10T10%3A51%3A45Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D8465aa11-37b2-475f-93cd-bae5a390ae1c.webp&sig=PkKS5wNQgIA8XWPI2nrJ3qukjbnFjZ4/HBlVeZTyHRU%3D" alt="หัวใจหมู"></td>
+          <td>110 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- หมูหมัก / Marinated Pork -->
+    <h4 class="mt-4">หมูหมัก / Marinated Pork</h4>
+    <table class="table table-bordered">
+      <thead>
+        <tr class="category-title">
+          <th>ชื่อสินค้า</th>
+          <th>รูปภาพ</th>
+          <th>ราคา</th> <!-- เพิ่มคอลัมนี้ -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>หมูหมักพริกไทย</td>
+          <td><img src="https://files.oaiusercontent.com/file-aPjfqYKqhm9dHjk2ZYAuNKby?se=2024-09-10T11%3A00%3A50Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D114b88c4-d19b-4a7a-a3e3-546928f704e7.webp&sig=VXHMVN9obIO5WF3SCNpLT2YHdsD42wWaWHHcfxvhQUM%3D" alt="หมูหมักพริกไทย"></td>
+          <td>160 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+        <tr>
+          <td>หมูหมักนุ่ม</td>
+          <td><img src="https://files.oaiusercontent.com/file-NrBvD5RZUdsBlSF6NV1PKhLm?se=2024-09-10T10%3A59%3A46Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df7056fa1-d4ab-47f3-ab1d-6962b3f265c6.webp&sig=HbkgQDZR71XKUBG7jx45ob%2Bril6iJ8wYbemRRAOhxj4%3D" alt="หมูหมักนุ่ม"></td>
+          <td>170 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+        <tr>
+          <td>หมูหมักน้ำมันงา</td>
+          <td><img src="https://files.oaiusercontent.com/file-yPUzvKufr3QhkFEeqdjFzfOo?se=2024-09-10T10%3A56%3A38Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D80cb94ed-d09d-48be-a73b-f5bbb93f6cf3.webp&sig=o0zOBymgmq7wqJZRJzUywW7%2BrWgSTClnrH7QIi0BpRk%3D" alt="หมูหมักน้ำมันงา"></td>
+          <td>190 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+        <tr>
+          <td>หมูหมักสามเกลอ</td>
+          <td><img src="https://files.oaiusercontent.com/file-ZTcjlVGqbu41TCK6iTm9uhmB?se=2024-09-10T10%3A40%3A52Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D97011a52-bda1-46c8-a511-7baa4404e7f4.webp&sig=be6YAB5AuyK62UDYHowPWHiM0xuNFEvZxdDT%2BUI2vm4%3D" alt="หมูหมักสามเกลอ"></td>
+          <td>220 บาท</td> <!-- เพิ่มราคา -->
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

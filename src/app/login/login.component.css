@@ -1,0 +1,60 @@
+/* ปรับแต่งสไตล์ของฟอร์มล็อกอิน */
+h1 {
+  color: #343a40;
+  margin-bottom: 20px;
+  font-family: Arial, sans-serif;
+}
+
+form.needs-validation {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-label {
+  font-weight: bold;
+  color: #495057;
+}
+
+input.form-control {
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  box-shadow: none;
+  transition: border-color 0.3s;
+}
+
+input.form-control:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875em;
+}
+
+button.btn-primary {
+  border-radius: 5px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+button.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
