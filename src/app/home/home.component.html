@@ -1,124 +1,111 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carousel Example</title>
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: #f0f2f5;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>เว็บไซต์เกี่ยวกับหมู</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+        }
 
-    .carousel {
-      margin-top: 50px;
-    }
+        /* แถบเมนู */
+        .navbar {
+            background-color: #6c757d;
+        }
+        .navbar-brand, .nav-link {
+            color: #fff !important;
+        }
+        .nav-link:hover {
+            color: #e0e0e0 !important;
+        }
 
-    /* ปรับขนาดของรูปภาพใน Carousel */
-    .carousel-item img {
-      border-radius: 12px; /* เพิ่มความโค้งมน */
-      box-shadow: 0 4px 15px rgba(103, 103, 103, 0.2); /* เพิ่มเงาให้กับรูปภาพ */
-      transition: transform 0.5s ease, opacity 0.5s ease; /* เอฟเฟกต์การเปลี่ยนภาพ */
-    }
+        /* ส่วน hero (ภาพหมู) */
+        .hero {
+            background-image: url('https://files.oaiusercontent.com/file-HIxMJDsUptzKcVmuFpJYfgfa?se=2024-09-13T15%3A49%3A26Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3D351b6182-8eab-4f68-8f74-77fe74c6ad7c.webp&sig=ysrIlptq9rGsbMwLrZ/NHfZxO0Iiym1o9cXWmai6/RY%3D');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
 
-    /* ปรับแต่งข้อความใน Carousel */
-    .carousel-caption {
-      padding: 1.5rem;
-      border-radius: 12px;
-      text-shadow: 2px 2px 6px rgba(79, 79, 79, 0.9); /* เพิ่มเงาให้กับตัวอักษร */
-    }
+        /* ส่วนเนื้อหา */
+        .main-content {
+            padding: 50px 0;
+        }
+        .main-content h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-weight: bold;
+        }
+        .main-content p {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #555;
+        }
 
-    .carousel-caption h3, .carousel-caption h5 {
-      font-size: 2rem;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .carousel-caption p {
-      font-size: 1.2rem;
-      color: #e9ecef;
-    }
-
-    /* ปุ่มควบคุม Carousel */
-    .carousel-control-prev-icon, .carousel-control-next-icon {
-      background-color: #ff0000; /* เปลี่ยนสีของปุ่มควบคุม */
-      border-radius: 50%; /* ทำให้ปุ่มควบคุมกลม */
-      width: 50px;
-      height: 50px;
-      box-shadow: 0 4px 8px rgba(136, 136, 136, 0.3); /* เพิ่มเงาให้ปุ่ม */
-    }
-
-    .carousel-control-prev, .carousel-control-next {
-      width: 5%;
-    }
-
-    /* ปรับแต่ง Indicators */
-    .carousel-indicators [data-bs-target] {
-      background-color: #ff0000; /* เปลี่ยนสีให้โดดเด่น */
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      margin: 3px;
-    }
-
-    .carousel-indicators .active {
-      background-color: #28a745; /* สี indicators เมื่อ active */
-    }
-
-    /* เอฟเฟกต์ Zoom เมื่อ Mouseover ที่รูป */
-    .carousel-item img:hover {
-      transform: scale(1.05); /* ขยายภาพเล็กน้อยเมื่อชี้เมาส์ */
-      transition: transform 0.3s ease-in-out;
-    }
-
-    /* ปรับแต่งฟอนต์ของข้อความ */
-    h3, h5 {
-      font-family: 'Poppins', sans-serif;
-    }
-
-  </style>
+        /* ส่วน Footer */
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="https://siamrath.co.th/sites/default/files/styles/1140/public/img/20221005/f47e0edb38e0860797388d6101e0a2e83ac18bdc465038756bc017b0e680adc0.jpg?itok=MNXXSaQ7" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h3>สินค้าขายดี</h3>
-          <p>Some representative placeholder content for the first slide.</p>
+    <!-- แถบนำทาง (Navigation Bar) -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
         </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://www.infoquest.co.th/wp-content/uploads/2023/07/20230727_Canva_%E0%B8%AB%E0%B8%A1%E0%B8%B9-1024x576.png" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Second slide label</h5>
-          <p>Some representative placeholder content for the second slide.</p>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <img src="https://www.infoquest.co.th/wp-content/uploads/2023/07/20230727_Canva_%E0%B8%AB%E0%B8%A1%E0%B8%B9-1024x576.png" class="d-block w-100" alt="...">
-        <div class="carousel-caption d-none d-md-block">
-          <h5>Third slide label</h5>
-          <p>Some representative placeholder content for the third slide.</p>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+    </nav>
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <!-- ส่วน Hero (ภาพพร้อมข้อความต้อนรับ) -->
+    <section class="hero">
+        <div class="container">
+            <h1>ยินดีต้อนรับสู่เว็บไซต์ขายเนื้อหมู</h1>
+            <p>เรียนรู้เกี่ยวกับหมู สัตว์น่ารักและเป็นมิตร</p>
+        </div>
+    </section>
+
+    <!-- ส่วนเนื้อหาหลัก -->
+    <section class="main-content">
+        <div class="container">
+            <h2>เกี่ยวกับหมู</h2>
+            <p>
+                หมูเป็นสัตว์ที่มีความสำคัญในระบบเกษตรกรรม หมูไม่เพียงเป็นแหล่งเนื้อที่สำคัญ แต่ยังเป็นสัตว์ที่มีบทบาทในวัฒนธรรมหลายๆ ที่
+            </p>
+        </div>
+    </section>
+
+    <!-- ส่วน Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 เว็บไซต์หมู. สงวนลิขสิทธิ์.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
